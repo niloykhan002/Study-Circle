@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
@@ -15,12 +16,6 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to={"/addCampaign"}>Pending Assignments</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/myCampaign"}>My Campaign</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/myDonations"}>My Donations</NavLink>
       </li>
     </>
   );
@@ -65,7 +60,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to={"/"} className="btn btn-ghost font-bold text-3xl">
-          Study <span>Circle</span>
+          Study <span className="text-primary text-4xl">Circle</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -77,9 +72,10 @@ const Navbar = () => {
             <img
               className="w-12 h-12 rounded-full"
               src={user.photoURL}
+              id="image-hover"
               alt=""
             />
-
+            <Tooltip anchorSelect="#image-hover" content={user.displayName} />
             <button onClick={handleSignOut} className="btn btn-neutral w-24">
               LogOut
             </button>

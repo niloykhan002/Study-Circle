@@ -1,32 +1,71 @@
 import Lottie from "lottie-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import registerLottie from "../assets/lottie/register.json";
 
 import useAuth from "../hooks/useAuth";
+import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
-  const { createUser } = useAuth();
+  const { createUser, updateUser } = useAuth();
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photoURL = form.photo.value;
+    const password = form.password.value;
+    const updateInfo = { displayName: name, photoURL: photoURL };
+    if (password.length < 6) {
+      return toast.error("Length must be at least 6 character ");
+    }
+    if (!/[A-Z]/.test(password)) {
+      return toast.error("Must have an Uppercase letter in the password");
+    }
+    if (!/[a-z]/.test(password)) {
+      return toast.error("Must have a Lowercase letter in the password");
+    }
+
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Registration Successful");
+        updateUser(updateInfo)
+          .then(() => {
+            navigate("/");
+          })
+          .catch((error) => {
+            toast.error(error.code);
+          });
       })
       .catch((error) => {
-        console.log(error.code);
+        toast.error(error.code);
       });
   };
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-68px)]">
+      <Toaster />
       <div className="lg:flex flex-row-reverse items-center gap-6">
         <div className="w-96">
           <Lottie animationData={registerLottie} />
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <h1 className="font-bold text-4xl text-center pt-8">Register</h1>
+        <div className="card bg-orange-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <h1 className="font-bold text-4xl text-center pt-8 text-primary ">
+            Register
+          </h1>
           <form onSubmit={handleRegister} className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Your Name"
+                className="input input-bordered"
+                required
+              />
+            </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -34,7 +73,19 @@ const Register = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder="Enter Your Email"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo URL</span>
+              </label>
+              <input
+                type="text"
+                name="photo"
+                placeholder="Enter Your Photo URL"
                 className="input input-bordered"
                 required
               />
@@ -46,13 +97,13 @@ const Register = () => {
               <input
                 type="password"
                 name="password"
-                placeholder="password"
+                placeholder="Enter Your Password"
                 className="input input-bordered"
                 required
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-neutral">Register</button>
+              <button className="btn bg-primary text-white">Register</button>
             </div>
           </form>
           <p className="pl-8 pb-8">
