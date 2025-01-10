@@ -46,10 +46,10 @@ const Register = () => {
     <div className="flex items-center justify-center min-h-[calc(100vh-68px)]">
       <Toaster />
       <div className="lg:flex flex-row-reverse items-center gap-6">
-        <div className="w-96">
+        <div className="w-[600px]">
           <Lottie animationData={registerLottie} />
         </div>
-        <div className="card bg-orange-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-secondary w-full max-w-sm shrink-0 shadow-2xl">
           <h1 className="font-bold text-4xl text-center pt-8 text-primary ">
             Register
           </h1>
