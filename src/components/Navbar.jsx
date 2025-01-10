@@ -9,13 +9,34 @@ const Navbar = () => {
   const link = (
     <>
       <li>
-        <NavLink to={"/"}>Home</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-primary text-white" : "hover:bg-secondary"
+          }
+          to={"/"}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/assignments"}>Assignments</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-primary text-white" : "hover:bg-secondary"
+          }
+          to={"/assignments"}
+        >
+          Assignments
+        </NavLink>
       </li>
       <li>
-        <NavLink to={"/addCampaign"}>Pending Assignments</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-primary text-white" : "hover:bg-secondary"
+          }
+          to={"/addCampaign"}
+        >
+          Pending Assignments
+        </NavLink>
       </li>
     </>
   );
@@ -76,16 +97,22 @@ const Navbar = () => {
               alt=""
             />
             <Tooltip anchorSelect="#image-hover" content={user.displayName} />
-            <button onClick={handleSignOut} className="btn btn-neutral w-24">
+            <button
+              onClick={handleSignOut}
+              className="btn bg-primary text-white md:w-24"
+            >
               LogOut
             </button>
           </div>
         ) : (
           <div className="space-x-4">
-            <Link to={"/login"} className="btn btn-neutral w-24">
+            <Link to={"/login"} className="btn bg-primary text-white md:w-24">
               Login
             </Link>
-            <Link to={"/register"} className="btn btn-neutral w-24">
+            <Link
+              to={"/register"}
+              className="btn bg-primary text-white md:w-24"
+            >
               Register
             </Link>
           </div>
