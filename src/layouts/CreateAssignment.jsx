@@ -37,10 +37,10 @@ const CreateAssignment = () => {
     });
   };
   return (
-    <div className="my-12 bg-secondary p-24 rounded-lg mx-4">
+    <div className="my-12 bg-base-200 p-24 rounded-lg mx-4">
       <Toaster />
-      <h2 className="text-center text-4xl font-bold text-primary">
-        Create Assignment
+      <h2 className="text-center text-4xl font-bold">
+        Create <span className="text-primary">Assignment</span>
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <label className="form-control w-full">

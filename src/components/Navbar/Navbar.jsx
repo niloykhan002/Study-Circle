@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 import { Tooltip } from "react-tooltip";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
@@ -10,30 +11,30 @@ const Navbar = () => {
     <>
       <li>
         <NavLink
-          className={({ isActive }) =>
-            isActive ? "bg-primary text-white" : "hover:bg-secondary"
-          }
           to={"/"}
+          className={({ isActive }) =>
+            isActive ? "active" : "hover:bg-secondary"
+          }
         >
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
-          className={({ isActive }) =>
-            isActive ? "bg-primary text-white" : "hover:bg-secondary"
-          }
           to={"/assignments"}
+          className={({ isActive }) =>
+            isActive ? "active" : "hover:bg-secondary"
+          }
         >
           Assignments
         </NavLink>
       </li>
       <li>
         <NavLink
-          className={({ isActive }) =>
-            isActive ? "bg-primary text-white" : "hover:bg-secondary"
-          }
           to={"/addCampaign"}
+          className={({ isActive }) =>
+            isActive ? "active" : "hover:bg-secondary"
+          }
         >
           Pending Assignments
         </NavLink>
@@ -109,24 +110,20 @@ const Navbar = () => {
                 >
                   <li>
                     <NavLink
-                      className={({ isActive }) =>
-                        isActive
-                          ? "bg-primary text-white"
-                          : "hover:bg-secondary"
-                      }
                       to={"/create-assignments"}
+                      className={({ isActive }) =>
+                        isActive ? "active" : "hover:bg-secondary"
+                      }
                     >
                       Create Assignments
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      className={({ isActive }) =>
-                        isActive
-                          ? "bg-primary text-white"
-                          : "hover:bg-secondary"
-                      }
                       to={"/my-assignments"}
+                      className={({ isActive }) =>
+                        isActive ? "active" : "hover:bg-secondary"
+                      }
                     >
                       My Attempted Assignments
                     </NavLink>
