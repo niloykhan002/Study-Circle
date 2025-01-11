@@ -4,6 +4,8 @@ import ErrorPage from "../layouts/ErrorPage";
 import Home from "../layouts/Home";
 import Register from "../layouts/Register";
 import Login from "../layouts/Login";
+import CreateAssignment from "../layouts/CreateAssignment";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +16,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/create-assignments",
+        element: (
+          <PrivateRoute>
+            <CreateAssignment />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/register",
