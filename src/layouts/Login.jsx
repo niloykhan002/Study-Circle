@@ -34,10 +34,10 @@ const Login = () => {
       });
   };
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-68px)]">
+    <div className="flex items-center justify-center my-20">
       <Toaster />
       <div className="lg:flex flex-row-reverse items-center gap-6">
-        <div className="w-[500px]">
+        <div className="md:w-[500px] w-80">
           <Lottie animationData={loginLottie} />
         </div>
         <div className="card bg-secondary w-full max-w-sm shrink-0 shadow-2xl">
