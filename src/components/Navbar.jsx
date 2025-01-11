@@ -54,7 +54,7 @@ const Navbar = () => {
     document.querySelector("html").setAttribute("data-theme", theme);
   }, [theme]);
   return (
-    <div className=" bg-rare">
+    <div className=" bg-base-100">
       <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">

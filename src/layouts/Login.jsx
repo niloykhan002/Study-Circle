@@ -40,7 +40,7 @@ const Login = () => {
         <div className="md:w-[500px] w-80">
           <Lottie animationData={loginLottie} />
         </div>
-        <div className="card bg-secondary w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-secondary w-full max-w-md shrink-0 shadow-2xl">
           <h1 className="font-bold text-4xl text-center pt-8 text-primary">
             Login
           </h1>
