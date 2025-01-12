@@ -7,6 +7,7 @@ import Login from "../layouts/Login";
 import CreateAssignment from "../layouts/CreateAssignment";
 import PrivateRoute from "./PrivateRoute";
 import Assignments from "../layouts/Assignments";
+import UpdateAssignment from "../layouts/UpdateAssignment";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,12 @@ const router = createBrowserRouter([
         path: "/assignments",
         element: <Assignments />,
         loader: () => fetch("http://localhost:5000/assignments"),
+      },
+      {
+        path: "/assignments/:id",
+        element: <UpdateAssignment />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/assignments/${params.id}`),
       },
       {
         path: "/register",

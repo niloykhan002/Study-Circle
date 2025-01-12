@@ -87,7 +87,7 @@ const Assignments = () => {
                   <div className="flex items-center gap-1">
                     <div className="flex items-center gap-1">
                       <Link
-                        to={`/updateCampaign/${assignment._id}`}
+                        to={`/assignments/${assignment._id}`}
                         className="btn btn-neutral btn-xs"
                       >
                         Update
