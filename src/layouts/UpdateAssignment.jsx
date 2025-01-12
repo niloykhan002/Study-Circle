@@ -3,10 +3,12 @@ import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import "react-datepicker/dist/react-datepicker.css";
 
 const UpdateAssignment = () => {
   const assignment = useLoaderData();
+  const navigate = useNavigate();
   const { user } = useAuth();
   const [selectedDate, setSelectedDate] = useState(new Date(assignment.date));
 
@@ -40,6 +42,9 @@ const UpdateAssignment = () => {
         console.log(res.data);
         if (res.data.modifiedCount > 0) {
           toast.success("Assignment Updated Successfully");
+          setTimeout(() => {
+            navigate("/assignments");
+          }, 1000);
         }
       });
   };

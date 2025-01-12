@@ -101,9 +101,12 @@ const Assignments = () => {
                         Delete
                       </button>
                     </div>
-                    <button className="btn btn-neutral btn-xs">
+                    <Link
+                      to={`/assignment-details/${assignment._id}`}
+                      className="btn btn-neutral btn-xs"
+                    >
                       View More
-                    </button>
+                    </Link>
                   </div>
                 </th>
               </tr>
