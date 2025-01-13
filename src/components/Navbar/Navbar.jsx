@@ -31,7 +31,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to={"/addCampaign"}
+          to={"/pending-assignments"}
           className={({ isActive }) =>
             isActive ? "active" : "hover:bg-secondary"
           }

@@ -36,6 +36,10 @@ const AssignmentDetails = () => {
           toast.success("Assignment submitted successfully");
           setIsModalOpen(false);
         }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        toast.error(error);
       });
   };
   return (
