@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import "./Banner.css";
 const Banner = () => {
   return (
-    <div className="hero min-h-[calc(100vh-324px)] background ">
+    <div className="hero min-h-[calc(100vh-250px)] background ">
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="container mx-auto px-4">
         <div className="">
@@ -13,7 +14,7 @@ const Banner = () => {
             motivation.
           </p>
           <button className="btn bg-primary text-white border-none">
-            Get Started
+            <Link to={"/assignments"}>Get Started</Link>
           </button>
         </div>
       </div>
