@@ -8,9 +8,8 @@ const OurFeatures = () => {
       <div>
         <div className="hero-content max-w-none flex-col lg:justify-between  lg:flex-row-reverse lg:items-end gap-10">
           <img
-            data-aos="flip-right"
             src={img1}
-            className="max-w-lg h-96 object-cover object-right-bottom rounded-lg shadow-2xl"
+            className="md:w-[550px] h-96 object-cover rounded-lg shadow-2xl"
           />
           <div>
             <h1 className="text-5xl font-bold">

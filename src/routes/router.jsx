@@ -42,7 +42,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/assignments/${params.id}`),
+          fetch(
+            `https://study-circle-server-five.vercel.app/assignments/${params.id}`
+          ),
       },
       {
         path: "/assignment-details/:id",
@@ -52,7 +54,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/assignments/${params.id}`),
+          fetch(
+            `https://study-circle-server-five.vercel.app/assignments/${params.id}`
+          ),
       },
       {
         path: "/pending-assignments",
@@ -61,7 +65,10 @@ const router = createBrowserRouter([
             <PendingAssignments />
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/assignment-submission"),
+        loader: () =>
+          fetch(
+            "https://study-circle-server-five.vercel.app/assignment-submission"
+          ),
       },
       {
         path: "/my-assignments",

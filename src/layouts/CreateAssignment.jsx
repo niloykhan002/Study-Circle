@@ -30,11 +30,16 @@ const CreateAssignment = () => {
       email,
     };
 
-    axios.post("http://localhost:5000/assignments", assignment).then((res) => {
-      console.log(res);
-      toast.success("Assignment Added Successfully");
-      form.reset();
-    });
+    axios
+      .post(
+        "https://study-circle-server-five.vercel.app/assignments",
+        assignment
+      )
+      .then((res) => {
+        console.log(res);
+        toast.success("Assignment Added Successfully");
+        form.reset();
+      });
   };
   return (
     <div className="my-12 bg-base-200 p-24 rounded-lg mx-4">

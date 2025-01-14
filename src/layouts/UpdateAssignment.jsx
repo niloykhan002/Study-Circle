@@ -37,7 +37,10 @@ const UpdateAssignment = () => {
       return toast.error("You cannot update this!");
     }
     axios
-      .put(`http://localhost:5000/assignments/${assignment._id}`, updateDoc)
+      .put(
+        `https://study-circle-server-five.vercel.app/assignments/${assignment._id}`,
+        updateDoc
+      )
       .then((res) => {
         console.log(res.data);
         if (res.data.modifiedCount > 0) {

@@ -84,9 +84,9 @@ const Navbar = () => {
           </div>
           <Link
             to={"/"}
-            className="btn btn-ghost hover:bg-secondary font-bold text-3xl"
+            className="btn btn-ghost hover:bg-secondary font-bold text-lg md:text-3xl"
           >
-            Study <span className="text-primary text-4xl">Circle</span>
+            Study <span className="text-primary md:text-4xl">Circle</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -94,10 +94,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="flex gap-4 items-center">
+            <div className="flex md:gap-4 gap-1 items-center">
               <div className="dropdown dropdown-end">
                 <img
-                  className="w-12 h-12 rounded-full"
+                  className="md:w-12 md:h-12 h-6 w-6 rounded-full"
                   src={user.photoURL}
                   role="button"
                   tabIndex={0}
@@ -133,31 +133,28 @@ const Navbar = () => {
               <Tooltip anchorSelect="#image-hover" content={user.displayName} />
               <button
                 onClick={handleSignOut}
-                className="btn bg-primary text-white md:w-24"
+                className="btn btn-sm md:h-12 bg-primary text-white md:w-24"
               >
                 LogOut
               </button>
             </div>
           ) : (
-            <div className="space-x-4">
-              <Link to={"/login"} className="btn bg-primary text-white md:w-24">
-                Login
-              </Link>
-              <Link
-                to={"/register"}
-                className="btn bg-primary text-white md:w-24"
-              >
-                Register
-              </Link>
+            <div className="md:space-x-4 flex items-center">
+              <button className="btn btn-xs md:h-12 bg-primary text-white md:w-24">
+                <Link to={"/login"}>Login</Link>
+              </button>
+              <button className="btn btn-xs md:h-12 bg-primary text-white md:w-24">
+                <Link to={"/register"}>Register</Link>
+              </button>
             </div>
           )}
-          <label className="swap swap-rotate ml-4">
+          <label className="swap swap-rotate md:ml-4">
             {/* this hidden checkbox controls the state */}
             <input onChange={handleToggle} type="checkbox" />
 
             {/* sun icon */}
             <svg
-              className="swap-on h-10 w-10 fill-current"
+              className="swap-on h-5 w-5 md:h-10 md:w-10 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -166,7 +163,7 @@ const Navbar = () => {
 
             {/* moon icon */}
             <svg
-              className="swap-off h-10 w-10 fill-current"
+              className="swap-off h-5 w-5 md:h-10 md:w-10 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >

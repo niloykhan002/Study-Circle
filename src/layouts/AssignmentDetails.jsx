@@ -29,7 +29,10 @@ const AssignmentDetails = () => {
     };
 
     axios
-      .post("http://localhost:5000/assignment-submission", submission)
+      .post(
+        "https://study-circle-server-five.vercel.app/assignment-submission",
+        submission
+      )
       .then((res) => {
         console.log(res.data);
         if (res.data.acknowledged === true) {

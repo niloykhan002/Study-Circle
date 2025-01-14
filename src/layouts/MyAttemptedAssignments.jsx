@@ -7,9 +7,12 @@ const MyAttemptedAssignments = () => {
   const { user } = useAuth();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/my-submission?email=${user.email}`, {
-        withCredentials: true,
-      })
+      .get(
+        `https://study-circle-server-five.vercel.app/my-submission?email=${user.email}`,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         setAssignments(res.data);
       });

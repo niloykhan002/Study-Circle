@@ -37,7 +37,7 @@ const PendingAssignments = () => {
 
     axios
       .patch(
-        `http://localhost:5000/assignment-submission/${clickedAssignment._id}`,
+        `https://study-circle-server-five.vercel.app/assignment-submission/${clickedAssignment._id}`,
         doc
       )
       .then((res) => {

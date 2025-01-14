@@ -11,7 +11,9 @@ const Assignments = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/assignments?filter=${query}`)
+      .get(
+        `https://study-circle-server-five.vercel.app/assignments?filter=${query}`
+      )
       .then((res) => {
         setAssignments(res.data);
       });
@@ -35,7 +37,7 @@ const Assignments = () => {
             icon: "error",
           });
         }
-        fetch(`http://localhost:5000/assignments/${id}`, {
+        fetch(`https://study-circle-server-five.vercel.app/assignments/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
