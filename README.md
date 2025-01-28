@@ -1,6 +1,6 @@
 # Study Circle
 
-This website is for online group study with friends. Users can create assignments, complete them, and grade their friends' assignments.
+Life Stream comes into the scenario to reduce or minimize the communication gap and connects people in a moment using the amazing power of SMS and email. As Life Stream services can also be availed by SMS, people from any class of the society can easily avail of Life Stream services.
 
 Live link: https://study-circle-b312a.web.app
 
