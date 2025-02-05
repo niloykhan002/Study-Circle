@@ -1,21 +1,56 @@
-# Study Circle
+# Study Circle 
 
-Life Stream comes into the scenario to reduce or minimize the communication gap and connects people in a moment using the amazing power of SMS and email. As Life Stream services can also be availed by SMS, people from any class of the society can easily avail of Life Stream services.
+## 📌 Introduction  
+Study Circle comes into the scenario to reduce or minimize the communication gap and connects people in a moment using the amazing power of SMS and email. As Study Circle services can also be availed by SMS, people from any class of the society can easily avail of Study Circle services. 
 
-Live link: https://study-circle-b312a.web.app
+## 📖 Table of Contents  
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Contributing](#contributing)  
+- [License](#license)  
 
-## Key Features
+## ✨ Features  
+✅ Connects Students Online  
+✅ Secure authentication and user management  
+✅ Complete the Assignment And give marks 
+✅ Interactive UI with real-time updates  
+✅ Notifications for Assignment submission  
 
-- Firebase Authentication
-- Lottie Files Animation
-- Responsiveness
-- Easy Routing
-- User Validation
+## 🛠 Tech Stack  
+- **Frontend**: React, React Router, React Query, Firebase Authentication  
+- **Backend**: Node.js, Express.js, MongoDB  
+- **State Management**: React Query  
+- **UI Components**: React Icons, Jodit React (for rich text), Lottie React (animations)  
 
-## Npm Packages
+## 📥 Installation  
 
-- react-datepicker
-- react-tooltip
-- sweet-alert2
-- react-hot-toast
-- lottie-react
+### Prerequisites  
+- Node.js and npm installed  
+- MongoDB running (local or cloud-based)  
+- Firebase project setup (for authentication)  
+
+### Steps  
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/blood-donation-platform.git
+   cd blood-donation-platform
+   ```
+
+2. **Install dependencies**  
+   ```bash
+   npm install
+   ```
+
+3. **Run the project**  
+   ```bash
+   npm start
+   ```
+
+## 🚀 Usage  
+- Sign up or log in using Firebase authentication.  
+- Register as a student and submit assignment  
+- Search for Assignments  
+
