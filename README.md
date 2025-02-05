@@ -35,8 +35,8 @@ Study Circle comes into the scenario to reduce or minimize the communication gap
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-username/blood-donation-platform.git
-   cd blood-donation-platform
+   git clone https://github.com/niloykhan002/study-circle.git
+   cd study-circle
    ```
 
 2. **Install dependencies**  
